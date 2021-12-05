@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<organization:Organization xmlns:organization="http://documentation.bonitasoft.com/organization-xml-schema/1.1" name="RadiUradiOrganizacija">
+  <customUserInfoDefinitions>
+    <customUserInfoDefinition>
+      <name>ocena</name>
+      <description></description>
+    </customUserInfoDefinition>
+  </customUserInfoDefinitions>
+  <users>
+    <user userName="fizicko.1">
+      <firstName>Pravnik</firstName>
+      <lastName>Pravnikovic</lastName>
+      <title>Mr</title>
+      <personalData/>
+      <professionalData/>
+      <password encrypted="false">bpm</password>
+      <customUserInfoValues>
+        <customUserInfoValue>
+          <name>ocena</name>
+          <value></value>
+        </customUserInfoValue>
+      </customUserInfoValues>
+    </user>
+    <user userName="pravno.1">
+      <firstName>Fizicar</firstName>
+      <lastName>Fizirovic</lastName>
+      <title>Mr</title>
+      <personalData/>
+      <professionalData/>
+      <password encrypted="false">bpm</password>
+      <customUserInfoValues>
+        <customUserInfoValue>
+          <name>ocena</name>
+          <value></value>
+        </customUserInfoValue>
+      </customUserInfoValues>
+    </user>
+  </users>
+  <roles>
+    <role name="Clan">
+      <displayName>Clan</displayName>
+    </role>
+  </roles>
+  <groups>
+    <group name="RadiUradi">
+      <displayName>Radi Uradi</displayName>
+    </group>
+    <group name="FizickaLica" parentPath="/RadiUradi">
+      <displayName>Fizicka lica</displayName>
+    </group>
+    <group name="Pravna lica" parentPath="/RadiUradi">
+      <displayName>Pravna lica</displayName>
+      <description>dobavljac, agent firme, pravno lice.&#xD;
+</description>
+    </group>
+    <group name="NeregistrovaniKorisnici" parentPath="/RadiUradi">
+      <displayName>Neregistrovani Korisnici</displayName>
+    </group>
+  </groups>
+  <memberships>
+    <membership>
+      <userName>fizicko.1</userName>
+      <roleName>Clan</roleName>
+      <groupName>FizickaLica</groupName>
+      <groupParentPath>/RadiUradi</groupParentPath>
+    </membership>
+    <membership>
+      <userName>pravno.1</userName>
+      <roleName>Clan</roleName>
+      <groupName>FizickaLica</groupName>
+      <groupParentPath>/RadiUradi</groupParentPath>
+    </membership>
+  </memberships>
+</organization:Organization>
