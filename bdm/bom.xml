@@ -1,18 +1,20 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
 <businessObjectModel xmlns="http://documentation.bonitasoft.com/bdm-xml-schema/1.0" modelVersion="1.0" productVersion="7.13.0">
     <businessObjects>
-        <businessObject qualifiedName="com.ftn.model.SifarnikPoslova">
+        <businessObject qualifiedName="com.ftn.model.PonudaIzvrsioca">
             <fields>
-                <field type="STRING" length="255" name="naziv" nullable="false" collection="false"/>
-                <field type="TEXT" length="255" name="opis" nullable="true" collection="false"/>
+                <relationField type="AGGREGATION" reference="com.ftn.model.SifarnikPoslova" fetchType="LAZY" name="zahtevanaUsluga" nullable="false" collection="false"/>
+                <field type="FLOAT" length="255" name="cenaUsluge" nullable="false" collection="false"/>
+                <field type="STRING" length="255" name="opise" nullable="true" collection="false"/>
             </fields>
             <uniqueConstraints/>
             <queries/>
             <indexes/>
         </businessObject>
-        <businessObject qualifiedName="com.ftn.model.ZahtevFizickogLica">
+        <businessObject qualifiedName="com.ftn.model.SifarnikPoslova">
             <fields>
-                <relationField type="AGGREGATION" reference="com.ftn.model.ZahtevanaUsluga" fetchType="LAZY" name="zahtevaneUsluge" nullable="true" collection="true"/>
+                <field type="STRING" length="255" name="naziv" nullable="false" collection="false"/>
+                <field type="TEXT" length="255" name="opis" nullable="true" collection="false"/>
             </fields>
             <uniqueConstraints/>
             <queries/>
@@ -43,8 +45,8 @@
         </businessObject>
         <businessObject qualifiedName="com.ftn.model.registracioniPodaci.DodatniPodaciOFirmi">
             <fields>
-                <relationField type="AGGREGATION" reference="com.ftn.model.SifarnikPoslova" fetchType="LAZY" name="businessServices" nullable="true" collection="true"/>
-                <field type="INTEGER" length="255" name="businessOperationArea" nullable="true" collection="true"/>
+                <relationField type="AGGREGATION" reference="com.ftn.model.SifarnikPoslova" fetchType="LAZY" name="uslugeFirme" nullable="true" collection="true"/>
+                <field type="INTEGER" length="255" name="zonaDelovanja" nullable="true" collection="true"/>
             </fields>
             <uniqueConstraints/>
             <queries/>
