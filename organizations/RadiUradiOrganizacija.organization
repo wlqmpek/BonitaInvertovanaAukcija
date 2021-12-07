@@ -2,7 +2,7 @@
 <organization:Organization xmlns:organization="http://documentation.bonitasoft.com/organization-xml-schema/1.1" name="RadiUradiOrganizacija">
   <customUserInfoDefinitions>
     <customUserInfoDefinition>
-      <name>ocena</name>
+      <name>zonaDelovanja</name>
       <description></description>
     </customUserInfoDefinition>
   </customUserInfoDefinitions>
@@ -16,7 +16,7 @@
       <password encrypted="false">bpm</password>
       <customUserInfoValues>
         <customUserInfoValue>
-          <name>ocena</name>
+          <name>zonaDelovanja</name>
           <value></value>
         </customUserInfoValue>
       </customUserInfoValues>
@@ -30,7 +30,7 @@
       <password encrypted="false">bpm</password>
       <customUserInfoValues>
         <customUserInfoValue>
-          <name>ocena</name>
+          <name>zonaDelovanja</name>
           <value></value>
         </customUserInfoValue>
       </customUserInfoValues>
