@@ -1,6 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <organization:Organization xmlns:organization="http://documentation.bonitasoft.com/organization-xml-schema/1.1" name="RadiUradiOrganizacija">
-  <customUserInfoDefinitions/>
+  <customUserInfoDefinitions>
+    <customUserInfoDefinition>
+      <name>zonaDelovanja</name>
+      <description></description>
+    </customUserInfoDefinition>
+  </customUserInfoDefinitions>
   <users>
     <user userName="fizicko.1">
       <firstName>Pravnik</firstName>
@@ -9,7 +14,12 @@
       <personalData/>
       <professionalData/>
       <password encrypted="false">bpm</password>
-      <customUserInfoValues/>
+      <customUserInfoValues>
+        <customUserInfoValue>
+          <name>zonaDelovanja</name>
+          <value></value>
+        </customUserInfoValue>
+      </customUserInfoValues>
     </user>
     <user userName="pravno.1">
       <firstName>Fizicar</firstName>
@@ -18,7 +28,12 @@
       <personalData/>
       <professionalData/>
       <password encrypted="false">bpm</password>
-      <customUserInfoValues/>
+      <customUserInfoValues>
+        <customUserInfoValue>
+          <name>zonaDelovanja</name>
+          <value></value>
+        </customUserInfoValue>
+      </customUserInfoValues>
     </user>
   </users>
   <roles>
