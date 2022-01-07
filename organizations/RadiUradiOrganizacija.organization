@@ -35,6 +35,33 @@
         </customUserInfoValue>
       </customUserInfoValues>
     </user>
+    <user userName="test">
+      <firstName>test</firstName>
+      <lastName>test</lastName>
+      <title>Mr</title>
+      <personalData/>
+      <professionalData/>
+      <password encrypted="false">bpm</password>
+      <customUserInfoValues>
+        <customUserInfoValue>
+          <name>zonaDelovanja</name>
+          <value></value>
+        </customUserInfoValue>
+      </customUserInfoValues>
+    </user>
+    <user userName="admin">
+      <firstName>admin</firstName>
+      <lastName>admin</lastName>
+      <personalData/>
+      <professionalData/>
+      <password encrypted="false">bpm</password>
+      <customUserInfoValues>
+        <customUserInfoValue>
+          <name>zonaDelovanja</name>
+          <value></value>
+        </customUserInfoValue>
+      </customUserInfoValues>
+    </user>
   </users>
   <roles>
     <role name="Clan">
@@ -48,7 +75,7 @@
     <group name="FizickaLica" parentPath="/RadiUradi">
       <displayName>Fizicka lica</displayName>
     </group>
-    <group name="Pravna lica" parentPath="/RadiUradi">
+    <group name="PravnaLica" parentPath="/RadiUradi">
       <displayName>Pravna lica</displayName>
       <description>dobavljac, agent firme, pravno lice.&#xD;
 </description>
@@ -56,18 +83,33 @@
     <group name="NeregistrovaniKorisnici" parentPath="/RadiUradi">
       <displayName>Neregistrovani Korisnici</displayName>
     </group>
+    <group name="Administratori" parentPath="/RadiUradi">
+      <displayName>Administratori</displayName>
+    </group>
   </groups>
   <memberships>
     <membership>
       <userName>fizicko.1</userName>
       <roleName>Clan</roleName>
-      <groupName>FizickaLica</groupName>
+      <groupName>PravnaLica</groupName>
       <groupParentPath>/RadiUradi</groupParentPath>
     </membership>
     <membership>
       <userName>pravno.1</userName>
       <roleName>Clan</roleName>
       <groupName>FizickaLica</groupName>
+      <groupParentPath>/RadiUradi</groupParentPath>
+    </membership>
+    <membership>
+      <userName>test</userName>
+      <roleName>Clan</roleName>
+      <groupName>NeregistrovaniKorisnici</groupName>
+      <groupParentPath>/RadiUradi</groupParentPath>
+    </membership>
+    <membership>
+      <userName>admin</userName>
+      <roleName>Clan</roleName>
+      <groupName>Administratori</groupName>
       <groupParentPath>/RadiUradi</groupParentPath>
     </membership>
   </memberships>
