@@ -7,6 +7,7 @@
                 <field type="FLOAT" length="255" name="cenaUsluge" nullable="false" collection="false"/>
                 <field type="TEXT" length="255" name="opis" nullable="true" collection="false"/>
                 <field type="BOOLEAN" length="255" name="prihvaceno" nullable="false" collection="false"/>
+                <field type="LOCALDATE" length="255" name="datumIzvrsanja" nullable="false" collection="false"/>
             </fields>
             <uniqueConstraints/>
             <queries/>
@@ -33,8 +34,9 @@
         <businessObject qualifiedName="com.ftn.model.Zahtev">
             <fields>
                 <field type="LONG" length="255" name="idKorisnika" nullable="false" collection="false"/>
-                <relationField type="COMPOSITION" reference="com.ftn.model.ZahtevanaUsluga" fetchType="LAZY" name="zahtevaneUsluge" nullable="true" collection="true"/>
+                <relationField type="COMPOSITION" reference="com.ftn.model.ZahtevanaUsluga" fetchType="LAZY" name="zahtevanaUsluga" nullable="false" collection="false"/>
                 <field type="INTEGER" length="255" name="brojPonuda" nullable="false" collection="false"/>
+                <field type="LOCALDATETIME" length="255" name="rokZahteva" nullable="false" collection="false"/>
             </fields>
             <uniqueConstraints/>
             <queries/>
@@ -45,7 +47,7 @@
                 <relationField type="AGGREGATION" reference="com.ftn.model.SifarnikPoslova" fetchType="LAZY" name="zahtevanaUsluga" nullable="false" collection="false"/>
                 <field type="DOUBLE" length="255" name="procenjenaVrednost" nullable="false" collection="false"/>
                 <relationField type="COMPOSITION" reference="com.ftn.model.PonudaIzvrsioca" fetchType="LAZY" name="ponudaIzvrsioca" nullable="true" collection="true"/>
-                <field type="LOCALDATE" length="255" name="rok" nullable="false" collection="false"/>
+                <field type="LOCALDATE" length="255" name="rokIzvrsenja" nullable="false" collection="false"/>
                 <field type="TEXT" length="255" name="opis" nullable="true" collection="false"/>
             </fields>
             <uniqueConstraints/>
