@@ -5,6 +5,10 @@
       <name>zonaDelovanja</name>
       <description></description>
     </customUserInfoDefinition>
+    <customUserInfoDefinition>
+      <name>usluge</name>
+      <description></description>
+    </customUserInfoDefinition>
   </customUserInfoDefinitions>
   <users>
     <user userName="fizicko.1">
@@ -17,6 +21,10 @@
       <customUserInfoValues>
         <customUserInfoValue>
           <name>zonaDelovanja</name>
+          <value></value>
+        </customUserInfoValue>
+        <customUserInfoValue>
+          <name>usluge</name>
           <value></value>
         </customUserInfoValue>
       </customUserInfoValues>
@@ -33,6 +41,10 @@
           <name>zonaDelovanja</name>
           <value></value>
         </customUserInfoValue>
+        <customUserInfoValue>
+          <name>usluge</name>
+          <value></value>
+        </customUserInfoValue>
       </customUserInfoValues>
     </user>
     <user userName="test">
@@ -47,6 +59,10 @@
           <name>zonaDelovanja</name>
           <value></value>
         </customUserInfoValue>
+        <customUserInfoValue>
+          <name>usluge</name>
+          <value></value>
+        </customUserInfoValue>
       </customUserInfoValues>
     </user>
     <user userName="admin">
@@ -58,6 +74,10 @@
       <customUserInfoValues>
         <customUserInfoValue>
           <name>zonaDelovanja</name>
+          <value></value>
+        </customUserInfoValue>
+        <customUserInfoValue>
+          <name>usluge</name>
           <value></value>
         </customUserInfoValue>
       </customUserInfoValues>
