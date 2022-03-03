@@ -24,7 +24,7 @@
         </businessObject>
         <businessObject qualifiedName="com.ftn.model.UslugeFirme">
             <fields>
-                <field type="STRING" length="255" name="idFirme" nullable="false" collection="false"/>
+                <field type="LONG" length="255" name="idFirme" nullable="false" collection="false"/>
                 <relationField type="AGGREGATION" reference="com.ftn.model.SifarnikPoslova" fetchType="LAZY" name="usluge" nullable="true" collection="true"/>
             </fields>
             <uniqueConstraints/>
