@@ -41,39 +41,39 @@
               <operator xmi:type="expression:Operator" xmi:id="_TpriPZruEeyQz-aDRhqOxw" type="ASSIGNMENT"/>
             </outputs>
           </connectors>
-          <operations xmi:type="expression:Operation" xmi:id="_fVVWwmzoEeyEhP9-7w05fQ">
-            <leftOperand xmi:type="expression:Expression" xmi:id="_fVVWw2zoEeyEhP9-7w05fQ" name="uslugeFirmeInput" content="uslugeFirmeInput" type="TYPE_VARIABLE" returnType="com.ftn.model.UslugeFirme">
-              <referencedElements xmi:type="process:BusinessObjectData" xmi:id="_fVVWxGzoEeyEhP9-7w05fQ" name="uslugeFirmeInput" dataType="_v8_JZFW1EeyfOrQBB8b4wQ" className="com.ftn.model.UslugeFirme"/>
+          <operations xmi:type="expression:Operation" xmi:id="_C6hllpukEeyQz-aDRhqOxw">
+            <leftOperand xmi:type="expression:Expression" xmi:id="_C6hll5ukEeyQz-aDRhqOxw" name="uslugeFirme" content="uslugeFirme" type="TYPE_VARIABLE" returnType="com.ftn.model.UslugeFirme">
+              <referencedElements xmi:type="process:BusinessObjectData" xmi:id="_C6hlmJukEeyQz-aDRhqOxw" name="uslugeFirme" dataType="_v8_JZFW1EeyfOrQBB8b4wQ" className="com.ftn.model.UslugeFirme"/>
             </leftOperand>
-            <rightOperand xmi:type="expression:Expression" xmi:id="_fVVWxWzoEeyEhP9-7w05fQ" name="uslugeFirmeInputInput.idFirme" content="uslugeFirmeInputInput?.idFirme" interpreter="GROOVY" type="TYPE_READ_ONLY_SCRIPT">
-              <referencedElements xmi:type="process:ContractInput" xmi:id="_fVVWxmzoEeyEhP9-7w05fQ" name="uslugeFirmeInputInput" type="COMPLEX" createMode="false"/>
+            <rightOperand xmi:type="expression:Expression" xmi:id="_C6hlmZukEeyQz-aDRhqOxw" name="uslugeFirmeInput.idFirme" content="userId" interpreter="GROOVY" type="TYPE_READ_ONLY_SCRIPT" returnType="java.lang.Long">
+              <referencedElements xmi:type="process:Data" xmi:id="_0nmLIJumEeyQz-aDRhqOxw" name="userId" dataType="_v8_JX1W1EeyfOrQBB8b4wQ"/>
             </rightOperand>
-            <operator xmi:type="expression:Operator" xmi:id="_fVVWx2zoEeyEhP9-7w05fQ" type="JAVA_METHOD" expression="setIdFirme">
-              <inputTypes>java.lang.String</inputTypes>
+            <operator xmi:type="expression:Operator" xmi:id="_C6hlm5ukEeyQz-aDRhqOxw" type="JAVA_METHOD" expression="setIdFirme">
+              <inputTypes>java.lang.Long</inputTypes>
             </operator>
           </operations>
-          <operations xmi:type="expression:Operation" xmi:id="_fVVWyGzoEeyEhP9-7w05fQ">
-            <leftOperand xmi:type="expression:Expression" xmi:id="_fVVWyWzoEeyEhP9-7w05fQ" name="uslugeFirmeInput" content="uslugeFirmeInput" type="TYPE_VARIABLE" returnType="com.ftn.model.UslugeFirme">
-              <referencedElements xmi:type="process:BusinessObjectData" xmi:id="_fVVWymzoEeyEhP9-7w05fQ" name="uslugeFirmeInput" dataType="_v8_JZFW1EeyfOrQBB8b4wQ" className="com.ftn.model.UslugeFirme"/>
+          <operations xmi:type="expression:Operation" xmi:id="_C6hlnJukEeyQz-aDRhqOxw">
+            <leftOperand xmi:type="expression:Expression" xmi:id="_C6hlnZukEeyQz-aDRhqOxw" name="uslugeFirme" content="uslugeFirme" type="TYPE_VARIABLE" returnType="com.ftn.model.UslugeFirme">
+              <referencedElements xmi:type="process:BusinessObjectData" xmi:id="_C6hlnpukEeyQz-aDRhqOxw" name="uslugeFirme" dataType="_v8_JZFW1EeyfOrQBB8b4wQ" className="com.ftn.model.UslugeFirme"/>
             </leftOperand>
-            <rightOperand xmi:type="expression:Expression" xmi:id="_fVVWy2zoEeyEhP9-7w05fQ" name="uslugeFirmeInputInput.usluge" content="def sifarnikPoslovaList = []&#xD;&#xA;//For each item collected in multiple input&#xD;&#xA;uslugeFirmeInputInput?.usluge.each{&#xD;&#xA;&#x9;//Add SifarnikPoslova instance&#xD;&#xA;&#x9;sifarnikPoslovaList.add({ currentSifarnikPoslovaInput ->&#xD;&#xA;&#x9;&#x9;def sifarnikPoslovaVar = sifarnikPoslovaDAO.findByPersistenceId(currentSifarnikPoslovaInput.persistenceId_string?.trim() ? currentSifarnikPoslovaInput.persistenceId_string.toLong() : null)&#xD;&#xA;&#x9;&#x9;if(!sifarnikPoslovaVar) {&#xD;&#xA;&#x9;&#x9;&#x9;throw new IllegalArgumentException(&quot;The aggregated reference of type `SifarnikPoslova` with the persistence id &quot; + currentSifarnikPoslovaInput.persistenceId_string?.trim() ? currentSifarnikPoslovaInput.persistenceId_string.toLong() : null + &quot; has not been found.&quot;)&#xD;&#xA;&#x9;&#x9;}&#xD;&#xA;&#x9;&#x9;return sifarnikPoslovaVar&#xD;&#xA;&#x9;}(it))&#xD;&#xA;}&#xD;&#xA;return sifarnikPoslovaList" interpreter="GROOVY" type="TYPE_READ_ONLY_SCRIPT" returnType="java.util.List">
-              <referencedElements xmi:type="process:ContractInput" xmi:id="_fVVWzGzoEeyEhP9-7w05fQ" name="uslugeFirmeInputInput" type="COMPLEX" createMode="false"/>
-              <referencedElements xmi:type="expression:Expression" xmi:id="_fVVWzWzoEeyEhP9-7w05fQ" name="sifarnikPoslovaDAO" content="sifarnikPoslovaDAO" type="TYPE_BUSINESS_OBJECT_DAO" returnType="com.ftn.model.SifarnikPoslovaDAO" returnTypeFixed="true"/>
+            <rightOperand xmi:type="expression:Expression" xmi:id="_C6hln5ukEeyQz-aDRhqOxw" name="uslugeFirmeInput.usluge" content="def sifarnikPoslovaList = []&#xD;&#xA;//For each item collected in multiple input&#xD;&#xA;uslugeFirmeInput?.usluge.each{&#xD;&#xA;&#x9;//Add SifarnikPoslova instance&#xD;&#xA;&#x9;sifarnikPoslovaList.add({ currentSifarnikPoslovaInput ->&#xD;&#xA;&#x9;&#x9;def sifarnikPoslovaVar = sifarnikPoslovaDAO.findByPersistenceId(currentSifarnikPoslovaInput.persistenceId_string?.trim() ? currentSifarnikPoslovaInput.persistenceId_string.toLong() : null)&#xD;&#xA;&#x9;&#x9;if(!sifarnikPoslovaVar) {&#xD;&#xA;&#x9;&#x9;&#x9;throw new IllegalArgumentException(&quot;The aggregated reference of type `SifarnikPoslova` with the persistence id &quot; + currentSifarnikPoslovaInput.persistenceId_string?.trim() ? currentSifarnikPoslovaInput.persistenceId_string.toLong() : null + &quot; has not been found.&quot;)&#xD;&#xA;&#x9;&#x9;}&#xD;&#xA;&#x9;&#x9;return sifarnikPoslovaVar&#xD;&#xA;&#x9;}(it))&#xD;&#xA;}&#xD;&#xA;return sifarnikPoslovaList" interpreter="GROOVY" type="TYPE_READ_ONLY_SCRIPT" returnType="java.util.List">
+              <referencedElements xmi:type="process:ContractInput" xmi:id="_C6hloJukEeyQz-aDRhqOxw" name="uslugeFirmeInput" type="COMPLEX"/>
+              <referencedElements xmi:type="expression:Expression" xmi:id="_C6hloZukEeyQz-aDRhqOxw" name="sifarnikPoslovaDAO" content="sifarnikPoslovaDAO" type="TYPE_BUSINESS_OBJECT_DAO" returnType="com.ftn.model.SifarnikPoslovaDAO" returnTypeFixed="true"/>
             </rightOperand>
-            <operator xmi:type="expression:Operator" xmi:id="_fVVWzmzoEeyEhP9-7w05fQ" type="JAVA_METHOD" expression="setUsluge">
+            <operator xmi:type="expression:Operator" xmi:id="_C6hlopukEeyQz-aDRhqOxw" type="JAVA_METHOD" expression="setUsluge">
               <inputTypes>java.util.List</inputTypes>
             </operator>
           </operations>
-          <operations xmi:type="expression:Operation" xmi:id="_cmhF4JrkEeyQz-aDRhqOxw">
-            <leftOperand xmi:type="expression:Expression" xmi:id="_cmhF4ZrkEeyQz-aDRhqOxw" name="zonaDelovanja" content="zonaDelovanja" type="TYPE_VARIABLE" returnType="java.lang.Integer">
-              <referencedElements xmi:type="process:Data" xmi:id="_jlGooJrkEeyQz-aDRhqOxw" name="zonaDelovanja" dataType="_v8_JXlW1EeyfOrQBB8b4wQ"/>
+          <operations xmi:type="expression:Operation" xmi:id="_HyW3MJukEeyQz-aDRhqOxw">
+            <leftOperand xmi:type="expression:Expression" xmi:id="_HyW3MZukEeyQz-aDRhqOxw" name="zonaDelovanja" content="zonaDelovanja" type="TYPE_VARIABLE" returnType="java.lang.Integer">
+              <referencedElements xmi:type="process:Data" xmi:id="_I3pEQJukEeyQz-aDRhqOxw" name="zonaDelovanja" dataType="_v8_JXlW1EeyfOrQBB8b4wQ"/>
             </leftOperand>
-            <rightOperand xmi:type="expression:Expression" xmi:id="_cmhF4prkEeyQz-aDRhqOxw" name="zonaDelovanjaInput" content="zonaDelovanjaInput" type="TYPE_CONTRACT_INPUT" returnType="java.lang.Integer">
-              <referencedElements xmi:type="process:ContractInput" xmi:id="_mcoPYJrkEeyQz-aDRhqOxw" name="zonaDelovanjaInput" type="INTEGER">
-                <mapping xmi:type="process:ContractInputMapping" xmi:id="_mcoPYZrkEeyQz-aDRhqOxw"/>
+            <rightOperand xmi:type="expression:Expression" xmi:id="_HyW3MpukEeyQz-aDRhqOxw" name="zonaDelovanjaInput" content="zonaDelovanjaInput" type="TYPE_CONTRACT_INPUT" returnType="java.lang.Integer">
+              <referencedElements xmi:type="process:ContractInput" xmi:id="_J_668JukEeyQz-aDRhqOxw" name="zonaDelovanjaInput" type="INTEGER">
+                <mapping xmi:type="process:ContractInputMapping" xmi:id="_J_668ZukEeyQz-aDRhqOxw"/>
               </referencedElements>
             </rightOperand>
-            <operator xmi:type="expression:Operator" xmi:id="_cmhF45rkEeyQz-aDRhqOxw" type="ASSIGNMENT"/>
+            <operator xmi:type="expression:Operator" xmi:id="_HyW3M5ukEeyQz-aDRhqOxw" type="ASSIGNMENT"/>
           </operations>
           <loopCondition xmi:type="expression:Expression" xmi:id="_DDijVFW2EeyfOrQBB8b4wQ" name="" content="" returnType="java.lang.Boolean" returnTypeFixed="true"/>
           <loopMaximum xmi:type="expression:Expression" xmi:id="_DDijVVW2EeyfOrQBB8b4wQ" name="" content="" returnType="java.lang.Integer" returnTypeFixed="true"/>
@@ -81,23 +81,32 @@
           <iteratorExpression xmi:type="expression:Expression" xmi:id="_DDijWFW2EeyfOrQBB8b4wQ" name="multiInstanceIterator" content="multiInstanceIterator" type="MULTIINSTANCE_ITERATOR_TYPE" returnType="java.lang.Object" returnTypeFixed="true"/>
           <completionCondition xmi:type="expression:Expression" xmi:id="_DDijV1W2EeyfOrQBB8b4wQ" name="" content="" returnType="java.lang.Boolean" returnTypeFixed="true"/>
           <formMapping xmi:type="process:FormMapping" xmi:id="_frC42VXCEeyfOrQBB8b4wQ">
-            <targetForm xmi:type="expression:Expression" xmi:id="_NoqgsGzoEeyEhP9-7w05fQ" name="dodatniPodaciForm" content="51ee08fb-8819-45ff-b615-4bc7302cbd77" type="FORM_REFERENCE_TYPE" returnTypeFixed="true"/>
+            <targetForm xmi:type="expression:Expression" xmi:id="_3ZpOQJuhEeyQz-aDRhqOxw" name="newForm1" content="479f2c79-9913-4e1f-a7e2-bde4493d5ca1" type="FORM_REFERENCE_TYPE" returnTypeFixed="true"/>
           </formMapping>
+          <filters xmi:type="process:ActorFilter" xmi:id="_r5n1MJs0EeyQz-aDRhqOxw" name="userFilter" definitionId="bonita-actorfilter-single-user" definitionVersion="1.0.0">
+            <configuration xmi:type="connectorconfiguration:ConnectorConfiguration" xmi:id="_r5n1MZs0EeyQz-aDRhqOxw" definitionId="bonita-actorfilter-single-user" version="1.0.0">
+              <parameters xmi:type="connectorconfiguration:ConnectorParameter" xmi:id="_r5n1Mps0EeyQz-aDRhqOxw" key="userId">
+                <expression xmi:type="expression:Expression" xmi:id="_r5n1M5s0EeyQz-aDRhqOxw" name="userId()" content="return userId" interpreter="GROOVY" type="TYPE_READ_ONLY_SCRIPT" returnType="java.lang.Long" returnTypeFixed="true">
+                  <referencedElements xmi:type="process:Data" xmi:id="_r5n1NJs0EeyQz-aDRhqOxw" name="userId" dataType="_v8_JX1W1EeyfOrQBB8b4wQ"/>
+                </expression>
+              </parameters>
+            </configuration>
+          </filters>
           <contract xmi:type="process:Contract" xmi:id="_frC42FXCEeyfOrQBB8b4wQ">
-            <inputs xmi:type="process:ContractInput" xmi:id="_fVUvsGzoEeyEhP9-7w05fQ" name="uslugeFirmeInputInput" type="COMPLEX" dataReference="uslugeFirmeInput" createMode="false">
-              <inputs xmi:type="process:ContractInput" xmi:id="_fVUvsWzoEeyEhP9-7w05fQ" name="idFirme" createMode="false"/>
-              <inputs xmi:type="process:ContractInput" xmi:id="_fVUvsmzoEeyEhP9-7w05fQ" name="usluge" type="COMPLEX" multiple="true" createMode="false">
-                <inputs xmi:type="process:ContractInput" xmi:id="_fVUvs2zoEeyEhP9-7w05fQ" name="persistenceId_string" createMode="false"/>
+            <inputs xmi:type="process:ContractInput" xmi:id="_C6hlkJukEeyQz-aDRhqOxw" name="uslugeFirmeInput" type="COMPLEX" dataReference="uslugeFirme">
+              <inputs xmi:type="process:ContractInput" xmi:id="_C6hlkZukEeyQz-aDRhqOxw" name="idFirme"/>
+              <inputs xmi:type="process:ContractInput" xmi:id="_C6hlkpukEeyQz-aDRhqOxw" name="usluge" type="COMPLEX" multiple="true">
+                <inputs xmi:type="process:ContractInput" xmi:id="_C6hlk5ukEeyQz-aDRhqOxw" name="persistenceId_string"/>
               </inputs>
             </inputs>
-            <inputs xmi:type="process:ContractInput" xmi:id="_VYxFwJrkEeyQz-aDRhqOxw" name="zonaDelovanjaInput" type="INTEGER">
-              <mapping xmi:type="process:ContractInputMapping" xmi:id="_VYxFwZrkEeyQz-aDRhqOxw"/>
+            <inputs xmi:type="process:ContractInput" xmi:id="_D4wvcJukEeyQz-aDRhqOxw" name="zonaDelovanjaInput" type="INTEGER">
+              <mapping xmi:type="process:ContractInputMapping" xmi:id="_D4wvcZukEeyQz-aDRhqOxw"/>
             </inputs>
-            <constraints xmi:type="process:ContractConstraint" xmi:id="_fVVWwGzoEeyEhP9-7w05fQ" expression="uslugeFirmeInputInput?.idFirme != null" errorMessage="idFirme is mandatory for UslugeFirme" name="mandatory_uslugeFirmeInputInput_idFirme">
-              <inputNames>uslugeFirmeInputInput</inputNames>
+            <constraints xmi:type="process:ContractConstraint" xmi:id="_C6hllJukEeyQz-aDRhqOxw" expression="!uslugeFirmeInput?.idFirme || uslugeFirmeInput?.idFirme.isLong()" errorMessage="A Long value is expected for UslugeFirme.idFirme" name="type_long_uslugeFirmeInput_idFirme">
+              <inputNames>uslugeFirmeInput</inputNames>
             </constraints>
-            <constraints xmi:type="process:ContractConstraint" xmi:id="_fVVWwWzoEeyEhP9-7w05fQ" expression="!uslugeFirmeInputInput?.usluge || uslugeFirmeInputInput?.usluge?.persistenceId_string" errorMessage="SifarnikPoslova must reference an existing instance with a persistenceId for UslugeFirme" name="aggregation_uslugeFirmeInputInput_usluge">
-              <inputNames>uslugeFirmeInputInput</inputNames>
+            <constraints xmi:type="process:ContractConstraint" xmi:id="_C6hllZukEeyQz-aDRhqOxw" expression="!uslugeFirmeInput?.usluge || uslugeFirmeInput?.usluge?.persistenceId_string" errorMessage="SifarnikPoslova must reference an existing instance with a persistenceId for UslugeFirme" name="aggregation_uslugeFirmeInput_usluge">
+              <inputNames>uslugeFirmeInput</inputNames>
             </constraints>
           </contract>
           <expectedDuration xmi:type="expression:Expression" xmi:id="_frC421XCEeyfOrQBB8b4wQ" name="" content="" returnType="java.lang.Long" returnTypeFixed="true"/>
@@ -129,9 +138,11 @@
               </parameters>
             </configuration>
             <outputs xmi:type="expression:Operation" xmi:id="_TrKgPJr_EeyQz-aDRhqOxw">
-              <leftOperand xmi:type="expression:Expression" xmi:id="_TrKgPZr_EeyQz-aDRhqOxw"/>
-              <rightOperand xmi:type="expression:Expression" xmi:id="_TrKgPpr_EeyQz-aDRhqOxw" name="result" content="result" type="CONNECTOR_OUTPUT_TYPE" returnType="java.lang.Object">
-                <referencedElements xmi:type="definition:Output" xmi:id="_TrKgP5r_EeyQz-aDRhqOxw" name="result" type="java.lang.Object"/>
+              <leftOperand xmi:type="expression:Expression" xmi:id="_TrKgPZr_EeyQz-aDRhqOxw" name="userId" content="userId" type="TYPE_VARIABLE" returnType="java.lang.Long">
+                <referencedElements xmi:type="process:Data" xmi:id="_fVtKAJsmEeyQz-aDRhqOxw" name="userId" dataType="_v8_JX1W1EeyfOrQBB8b4wQ"/>
+              </leftOperand>
+              <rightOperand xmi:type="expression:Expression" xmi:id="_TrKgPpr_EeyQz-aDRhqOxw" name="newScript()" content="import org.bonitasoft.engine.identity.User&#xD;&#xA;&#xD;&#xA;return ((User) result).getId()" interpreter="GROOVY" type="TYPE_READ_ONLY_SCRIPT" returnType="java.lang.Long">
+                <referencedElements xmi:type="definition:Output" xmi:id="_fVtKAZsmEeyQz-aDRhqOxw" name="result" type="java.lang.Object"/>
               </rightOperand>
               <operator xmi:type="expression:Operator" xmi:id="_TrKgQJr_EeyQz-aDRhqOxw" type="ASSIGNMENT"/>
             </outputs>
@@ -295,14 +306,14 @@
           </referencedElements>
         </defaultValue>
       </data>
-      <data xmi:type="process:BusinessObjectData" xmi:id="_LtAFQGzoEeyEhP9-7w05fQ" name="uslugeFirmeInput" dataType="_v8_JZFW1EeyfOrQBB8b4wQ" className="com.ftn.model.UslugeFirme">
-        <defaultValue xmi:type="expression:Expression" xmi:id="_LtAFQWzoEeyEhP9-7w05fQ" name="" content="" interpreter="GROOVY" type="TYPE_READ_ONLY_SCRIPT" returnType="java.lang.Object"/>
-      </data>
       <data xmi:type="process:Data" xmi:id="_VPjD4JraEeyQz-aDRhqOxw" name="userId" dataType="_v8_JX1W1EeyfOrQBB8b4wQ">
         <defaultValue xmi:type="expression:Expression" xmi:id="_VPjD4ZraEeyQz-aDRhqOxw" name="0" content="0" returnType="java.lang.Long"/>
       </data>
       <data xmi:type="process:Data" xmi:id="_TQJMYJrkEeyQz-aDRhqOxw" name="zonaDelovanja" dataType="_v8_JXlW1EeyfOrQBB8b4wQ">
         <defaultValue xmi:type="expression:Expression" xmi:id="_TQJMYZrkEeyQz-aDRhqOxw" name="0" content="0" returnType="java.lang.Integer"/>
+      </data>
+      <data xmi:type="process:BusinessObjectData" xmi:id="_2q-x4JsnEeyQz-aDRhqOxw" name="uslugeFirme" dataType="_v8_JZFW1EeyfOrQBB8b4wQ" className="com.ftn.model.UslugeFirme">
+        <defaultValue xmi:type="expression:Expression" xmi:id="_2q-x4ZsnEeyQz-aDRhqOxw" name="" content="" interpreter="GROOVY" type="TYPE_READ_ONLY_SCRIPT" returnType="java.lang.Object"/>
       </data>
       <formMapping xmi:type="process:FormMapping" xmi:id="_v8_JRFW1EeyfOrQBB8b4wQ">
         <targetForm xmi:type="expression:Expression" xmi:id="_1RzfEGm8Eey3VuczPWG-1A" name="registracijaForm" content="6ec56c91-f7e3-4a2c-b644-a8a88c3a3767" type="FORM_REFERENCE_TYPE" returnTypeFixed="true"/>
@@ -388,9 +399,6 @@
         <inputs xmi:type="process:ContractInput" xmi:id="_PHz94GypEey3VuczPWG-1A" name="pravnoLiceForm" type="BOOLEAN">
           <mapping xmi:type="process:ContractInputMapping" xmi:id="_PHz94WypEey3VuczPWG-1A"/>
         </inputs>
-        <constraints xmi:type="process:ContractConstraint" xmi:id="_Oq2AYGm8Eey3VuczPWG-1A" expression="return inputRegistracioneForme.lozinka1 == inputRegistracioneForme.lozinka2 &amp;&amp; inputRegistracioneForme.lozinka1.trim().length() >= 3;" errorMessage="Lozinka i ponovljena lozinka se moraju poklapati!" name="constraint1">
-          <inputNames>inputRegistracioneForme</inputNames>
-        </constraints>
       </contract>
       <searchIndexes xmi:type="process:SearchIndex" xmi:id="_v8_JTVW1EeyfOrQBB8b4wQ">
         <name xmi:type="expression:Expression" xmi:id="_v8_JTlW1EeyfOrQBB8b4wQ" content="" returnTypeFixed="true"/>
